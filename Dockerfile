@@ -8,7 +8,6 @@ RUN apt-get update \
     && apt-get -y full-upgrade \
     && apt-get install -y --no-install-recommends \
        sudo systemd systemd-sysv apt-utils \
-       build-essential libffi-dev libssl-dev \
        python-pip python-setuptools \
     && rm -rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
