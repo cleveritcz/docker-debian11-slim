@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install dependencies.
 RUN apt-get update \
-    && apt-get full-upgrade \
+    && apt-get -y full-upgrade \
     && apt-get install -y --no-install-recommends \
        sudo systemd \
        build-essential libffi-dev libssl-dev \
