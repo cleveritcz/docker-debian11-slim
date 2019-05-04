@@ -1,30 +1,4 @@
-# Debian 9 (Stretch) Ansible Test Image
-
-[![Docker Automated build](https://img.shields.io/docker/automated/geerlingguy/docker-debian9-ansible.svg?maxAge=2592000)](https://hub.docker.com/r/geerlingguy/docker-debian9-ansible/)
-
-Debian 9 (Stretch) Docker container for Ansible playbook and role testing.
-
-## Tags
-
-  - `latest`: Latest stable version of Ansible.
-  - `testing`: Same as `latest`, but with additional testing dependencies, including:
-    - `yamllint`
-    - `ansible-lint`
-    - `flake8`
-    - `testinfra`
-    - `molecule`
-
-The latest tag is a lightweight image for basic validation of Ansible playbooks. The `testing` tag also includes a comprehensive suite of Ansible and infrastructure testing tools in case you want them pre-installed.
-
-## How to Build
-
-This image is built on Docker Hub automatically any time the upstream OS container is rebuilt, and any time a commit is made or merged to the `master` branch. But if you need to build the image on your own locally, do the following:
-
-  1. [Install Docker](https://docs.docker.com/engine/installation/).
-  2. `cd` into this directory.
-  3. Run `docker build -t debian9-ansible .`
-
-> Note: Switch between `master` and `testing` depending on whether you want the extra testing tools present in the resulting image.
+# Debian 9 (Stretch-Slim) 
 
 ## How to Use
 
