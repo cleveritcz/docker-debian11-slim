@@ -8,7 +8,7 @@ ENV XDG_RUNTIME_DIR=/run/user/`id -u`
 RUN apt-get update \
     && apt-get -y full-upgrade \
     && apt-get install -y --no-install-recommends \
-       sudo systemd \
+       sudo systemd systemd-sysv \
        build-essential libffi-dev libssl-dev \
        python-pip python-dev python-setuptools python-wheel \
     && rm -rf /var/lib/apt/lists/* \
