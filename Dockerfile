@@ -2,6 +2,7 @@ FROM debian:stretch-slim
 LABEL maintainer="Martin Smola"
 
 ENV DEBIAN_FRONTEND noninteractive
+ENV XDG_RUNTIME_DIR=/run/user/`id -u`
 
 # Install dependencies.
 RUN apt-get update \
