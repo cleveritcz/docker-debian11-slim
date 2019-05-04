@@ -1,6 +1,8 @@
 FROM debian:stretch-slim
 LABEL maintainer="Martin Smola"
 
+ENV DEBIAN_FRONTEND noninteractive
+
 # Install dependencies.
 RUN apt-get update \
     && apt-get -y full-upgrade \
