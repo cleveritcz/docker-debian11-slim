@@ -4,7 +4,7 @@ services: docker
 before_install:
   # Upgrade Docker.
   - sudo apt-get update
-  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
+  - sudo apt-get -y 
 
 script:
   # Test building Dockerfile.
@@ -15,3 +15,5 @@ script:
 
   # Verify Ansible is available in the container.
   - docker exec --tty debian9-slim env TERM=xterm dpkg-query -W -f='${Status} ${Package} ${Version} ${Architecture}\n'|awk '($1 == "install") && ($2 == "ok") {print $4" "$5" "$6}'
+
+  - docker push cleveritcz/debian9-slim
