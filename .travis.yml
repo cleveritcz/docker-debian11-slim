@@ -6,7 +6,7 @@ script:
   - docker build -t cleveritcz/debian9-slim:latest .
 
   # Test running the container.
-  - docker run --name debian9-slim -d --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro debian9-slim
+  - docker run --name debian9-slim -d --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro cleveritcz/debian9-slim:latest
 
   # Verify packages in the container.
   - docker exec --tty debian9-slim env TERM=xterm dpkg-query -W -f='${Status} ${Package} ${Version} ${Architecture}\n'|awk '($1 == "install") && ($2 == "ok") {print $4" "$5" "$6}'
