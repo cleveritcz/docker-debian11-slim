@@ -1,11 +1,6 @@
 ---
 services: docker
 
-before_install:
-  # Upgrade Docker.
-  - sudo apt-get update
-  - sudo apt-get -y 
-
 script:
   # Test building Dockerfile.
   - docker build -t debian9-slim .
