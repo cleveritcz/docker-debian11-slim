@@ -3,7 +3,7 @@ services: docker
 
 script:
   # Test building Dockerfile.
-  - docker build -t debian9-slim .
+  - docker build -t cleveritcz/debian9-slim:latest .
 
   # Test running the container.
   - docker run --name debian9-slim -d --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro debian9-slim
