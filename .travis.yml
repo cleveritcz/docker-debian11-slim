@@ -11,4 +11,4 @@ script:
   # Verify packages in the container.
   - docker exec --tty debian9-slim env TERM=xterm dpkg-query -W -f='${Status} ${Package} ${Version} ${Architecture}\n'|awk '($1 == "install") && ($2 == "ok") {print $4" "$5" "$6}'
 
-  - docker push docker.io/cleveritcz/debian9-slim:latest
+  - curl https://cloud.docker.com/api/build/v1/source/ce521611-b7ee-4739-b2bf-8f81eb53d568/trigger/acf808e6-385f-4c14-a00a-2546e02a4b2d/call/
