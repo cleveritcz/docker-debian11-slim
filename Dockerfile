@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
     && apt-get -y --no-install-recommends full-upgrade \
     && apt-get -y autoremove \
-    && apt -f -y install
+    && apt -f -y install  \
     && rm -rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
