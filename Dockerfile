@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:11-slim
 LABEL maintainer="Martin Smola"
 
 ENV DEBIAN_FRONTEND noninteractive
